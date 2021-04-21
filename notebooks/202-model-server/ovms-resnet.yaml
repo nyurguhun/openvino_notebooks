@@ -1,0 +1,18 @@
+metadata:
+  name: ovms-resnet
+spec:
+  aws_access_key_id: "minio"
+  aws_region: "us-east-1"
+  aws_secret_access_key: "minio123"
+  grpc_port: 8080
+  image_name: registry.connect.redhat.com/intel/openvino-model-server:latest
+  log_level: INFO
+  model_name: "resnet"
+  model_path: "s3://minio-service:9000/models/resnet"
+  plugin_config: '{\"CPU_THROUGHPUT_STREAMS\":\"1\"}'
+  replicas: 1
+  resources:
+    limits:
+      cpu: 4
+      memory: 250Mi
+  rest_port: 8081
