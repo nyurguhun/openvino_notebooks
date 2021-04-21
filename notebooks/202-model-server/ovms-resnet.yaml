@@ -1,3 +1,5 @@
+apiVersion: intel.com/v1alpha1
+kind: Ovms
 metadata:
   name: ovms-resnet
 spec:
