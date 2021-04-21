@@ -16,5 +16,6 @@ spec:
   resources:
     limits:
       cpu: 4
-      memory: 250Mi
+      memory: 500Mi
   rest_port: 8081
+  service_type: ClusterIP
