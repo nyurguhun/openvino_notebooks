@@ -1,0 +1,18 @@
+apiVersion: intel.com/v1alpha1
+kind: Ovms
+metadata:
+  name: ovms-pipeline
+  namespace: ovms
+spec:
+  aws_access_key_id: "minio"
+  aws_region: "us-east-1"
+  aws_secret_access_key: "minio123"
+  config_configmap_name: 'ovms-face-detection-pipeline'
+  grpc_port: 8080
+  image_name: >-
+    registry.connect.redhat.com/intel/openvino-model-server:latest
+  log_level: INFO
+  plugin_config: '{\"CPU_THROUGHPUT_STREAMS\":\"1\"}'
+  replicas: 1
+  rest_port: 8081
+  service_type: ClusterIP
