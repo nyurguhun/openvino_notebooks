@@ -1,0 +1,11 @@
+{
+  "model_config_list": [
+    {
+      "config": {
+        "name": "textureNet",
+        "base_path": "s3://minio-service:9000/models/textureNet",
+        "batch_size": "auto"
+      }
+    }
+  ]
+}
